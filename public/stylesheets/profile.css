@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+}
+
+.main-profile {
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-bottom: 30px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    background: blur(10px);
+    color: black;
+    width: 800px;
+    border-radius: 10px;
+    height: auto;
+    flex-direction: column;
+}
+
+.logo img{
+    background-color: green;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-profile h2 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.main-profile a {
+    background-color: rgb(255, 100, 100);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-profile a:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 100, 100);
+}
+
+
+.posts {
+    justify-content: space-around;
+    padding: 30px 0px 30px 25px;
+    columns: 6; /* Number of columns */
+    column-gap: 0; /* Gap between columns */
+}
+
+/* Container for each post */
+.post {
+    display: inline-block; /* Ensure posts are treated as inline elements for columns */
+    max-width: 200px; /* Full width within the column */
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between posts */
+    position: relative; /* Positioning context for the icon */
+}
+
+/* Container for the image */
+.image {
+    position: relative; /* Positioning context for the icon */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Image styling */
+.image img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Add rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.image a{
+    text-decoration: none;
+    color: black;
+}
+/* Icon styling */
+.image a .fa-trash {
+    position: absolute; /* Position the icon absolutely */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better visibility */
+    border-radius: 50%; /* Rounded icon background */
+    padding: 5px; /* Padding around the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for the icon */
+.image a .fa-trash:hover {
+    background-color: rgba(255, 100, 100, 0.8); /* Change background color on hover */
+}
+
+/* Paragraph inside the post */
+.post p {
+    margin: 10px 5px;
+}
+
+/* Hover effect for images */
+.image img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+
+/* Image styling */
+.posts img {
+    width: 100%; /* Make images responsive */
+    max-width: 200px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+/* Hover effect for images */
+.posts img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+h3{
+    margin-left: 50%;
+}
+/* Form container */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    background: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Input fields */
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* File input specific styling */
+form input[type="file"] {
+    padding: 5px;
+}
+
+/* Submit button */
+form button[type="submit"] {
+    background-color: rgb(255, 100, 100);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for submit button */
+form button[type="submit"]:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 100, 100);
+}
+
+.fa-regular{
+    color: red;
+}
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    form input[type="text"],
+    form input[type="file"],
+    form button[type="submit"] {
+        font-size: 14px;
+    }
+}
